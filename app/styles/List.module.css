@@ -1,0 +1,52 @@
+.container {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #002639;
+  }
+  .Table {
+    border: 1px solid #002639;
+    border-radius: .375rem;
+    overflow: hidden;
+  }
+  .Table button {
+    border: none;
+    padding: 5px 10px;
+    background-color: #b62929;
+    border-radius: .375rem;
+    color: #ffffff;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .Table button:hover {
+    background-color: #f13c3c;
+  }
+  .main table {
+    border-collapse: collapse;
+  }
+  .main table th {
+    background-color: #009adf;
+    padding: 12px;
+    text-align: left;
+    color: white;
+  }
+  .main table td {
+    padding: 12px;
+  }
+  .main table tr:nth-child(even){
+    background-color: #98cee9;
+  }
+  .main table tr:hover{
+    background-color: #739baf;
+  }
+  .hidden {
+    display: none;
+  }

@@ -1,0 +1,38 @@
+.container {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #002639;
+}
+.main h1 {
+  font-size: 70px;
+  margin: 0;
+}
+.main h2 {
+  margin: 0;
+  color: #009adf;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.buttons a {
+  margin: 20px;
+  padding: 15px;
+  border-radius: .375rem;
+  background-color: #009adf;
+  color: white;
+}
+.buttons a:hover {
+  background-color: #002639;
+}

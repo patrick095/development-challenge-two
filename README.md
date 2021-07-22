@@ -1,3 +1,37 @@
+# Codes to run in local machine
+## Install node modules with 'yarn install'
+
+### In this project i'm using db from Docker, to configure new db open api/src/config and configure ORMConfig.ts
+
+
+## To start in development mode run this code:
+yarn dev
+(with this command run back-end and front-end together)
+
+## To use optimized version run build 'yarn build' and start with 'yarn start'
+
+# Codes to run in docker
+## To install modules and run in production run:
+docker-compose -f docker-compose.yml -f install-modules.yml -f production.yml up -d
+<br />
+
+## To install modules on Docker run:
+ docker-compose -f docker-compose.yml -f install-modules.yml up -d   
+<br />
+
+## To start in development mode on Docker run this code:
+ docker-compose up -d
+<br />
+
+## To start in production mode on Docker run this code:
+ docker-compose -f docker-compose.yml -f production.yml up -d
+
+ <br />
+
+## front-end running on port 3000
+## back-end running on port 3001
+<br />
+
 # Development challenge
 
 Medcloud's challenge for the general development internship vacancy.

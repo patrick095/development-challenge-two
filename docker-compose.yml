@@ -1,0 +1,52 @@
+
+services:
+  db:
+    image: postgres
+    restart: always
+    ports:
+    - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: "medcloudbr"
+    networks:
+      - backend
+
+  api:
+    image: node
+    user: "node"
+    working_dir: /home/node/api
+    environment:
+      - NODE_ENV=development
+      - DB_HOST=db
+    volumes:
+      - ./api:/home/node/api
+    ports:
+      - 3001:3001
+    command: "yarn dev"
+    depends_on:
+      db:
+        condition: service_started
+    networks:
+      - backend
+
+  app:
+    image: node
+    user: "node"
+    working_dir: /home/node/app
+    environment: 
+      - NODE_ENV=development
+    volumes: 
+      - ./app:/home/node/app
+    ports:
+      - 3000:3000
+    depends_on:
+      api:
+        condition: service_started
+    command: "yarn dev"
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
