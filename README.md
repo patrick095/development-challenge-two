@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Codes to run in docker
 ## Torun the project use this code:
@@ -6,6 +7,36 @@ docker-compose up -d
 
 ## front-end running on port 3000
 ## back-end running on port 3001
+=======
+# Codes to run in local machine
+- clone this repository to your pc
+- Install node modules with 'yarn install'
+- yarn dev (development mode back-end + front-end)
+- yarn build && yarn start (production mode)
+
+*⚠️*  - *In this project i'm using postgres from Docker, to configure other db open api/src/config and configure ORMConfig.ts*
+
+# Codes to run in docker
+## To install modules and run in production:
+docker-compose -f docker-compose.yml -f install-modules.yml -f production.yml up -d
+<br />
+
+## To install modules on Docker:
+ docker-compose -f docker-compose.yml -f install-modules.yml up -d   
+<br />
+
+## To start in development mode on Docker:
+ docker-compose up -d
+<br />
+
+## To start in production mode without install modules on Docker:
+ docker-compose -f docker-compose.yml -f production.yml up -d
+
+ <br />
+
+## *front-end running on port* 3000
+## *back-end running on port* 3001
+>>>>>>> a076857b59879b5456302d10f5f8df35f1f72d67
 <br />
 
 # Development challenge
