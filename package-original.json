@@ -1,0 +1,46 @@
+{
+  "name": "medcloudbr-challenge-two",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "installer": "yarn --cwd 'app' install && yarn --cwd 'api' install",
+    "dev": "concurrently \"ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules api/src/index.ts\" \" next dev ./app/\"",
+    "build": "concurrently \"babel api/src --extensions \".js,.ts\" --out-dir api/dist --copy-files --no-copy-ignored\" \"next build ./app/\"",
+    "start": "concurrently \"node api/dist/index.js\" \"next start ./app/\"",
+    "lint": "next lint ./app/"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.2",
+    "@material-ui/icons": "^4.11.2",
+    "axios": "^0.21.1",
+    "concurrently": "^6.2.0",
+    "next": "11.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hook-form": "^7.11.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "pg": "^8.6.0",
+    "reflect-metadata": "^0.1.13",
+    "tsconfig-paths": "^3.10.1",
+    "typeorm": "^0.2.34"
+  },
+  "devDependencies": {
+    "@types/node": "^16.4.0",
+    "@types/react": "17.0.14",
+    "eslint": "7.31.0",
+    "eslint-config-next": "11.0.1",
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-proposal-decorators": "^7.14.5",
+    "@babel/preset-env": "^7.14.8",
+    "@babel/preset-typescript": "^7.14.5",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "babel-plugin-transform-typescript-metadata": "^0.3.2",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "4.3.5"
+  }
+}
