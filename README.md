@@ -1,10 +1,10 @@
 # Codes to run in docker
-## Torun the project use this code:
+## To run the project use this code:
 docker-compose up -d
 <br />
 
-## front-end running on port 3000
-## back-end running on port 3001
+### front-end running on port 3000
+### back-end running on port 3001
 <br />
 
 # Development challenge
